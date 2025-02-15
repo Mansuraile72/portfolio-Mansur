@@ -5,162 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>व्हाइटबोर्ड एनिमेशन पोर्टफोलियो</title>
     <style>
-        /* Basic Reset और Fonts */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+        * { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
+        .featured-section, .categories-section { padding:2rem; text-align:center; }
+        .featured-videos, .categories-grid, .videos-grid { 
+            display:grid; 
+            grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+            gap:1rem; 
+            margin:2rem 0;
         }
-
-        /* Featured Videos Section */
-        .featured-section {
-            padding: 2rem;
-            text-align: center;
-            background: #f5f5f5;
+        .video-card { background:#fff; border-radius:10px; padding:1rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+        .video-card iframe { width:100%; height:200px; border-radius:5px; }
+        .category-card { 
+            background:#007bff; color:#fff; padding:2rem; border-radius:10px;
+            cursor:pointer; transition:transform 0.3s; 
         }
-        <div class="video-card">
-  <iframe 
-    width="100%" 
-    height="200"   <!-- Height 200px करें (Original 315px के बजाय) -->
-    src="https://www.youtube.com/embed/S6n72q0GaHc" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-  </iframe>
-  <h3>वीडियो का नाम यहां लिखें</h3>
-</div>
-        .featured-videos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .video-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .video-thumbnail {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        /* Categories Grid */
-        .categories-section {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .category-card {
-            background: #007bff;
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .category-card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Videos Grid (Category-wise) */
-        .videos-grid {
-            display: none; /* शुरू में छिपा रहेगा */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        /* About Me Section */
-        .about-section {
-            padding: 3rem 2rem;
-            background: #333;
-            color: white;
-            text-align: center;
-        }
+        .category-card:hover { transform:scale(1.05); }
+        .about-section { padding:3rem 2rem; background:#333; color:#fff; text-align:center; }
+        .drive-link { display:block; margin:1rem; color:#007bff; text-decoration:none; }
     </style>
 </head>
 <body>
     <!-- Featured Videos -->
     <section class="featured-section">
-        <h1>मेरे बेस्ट वीडियो</h1>
+        <h1>मेरे बेस्ट वीडियो ✨</h1>
         <div class="featured-videos">
-            <!-- यहां अपने वीडियो लिंक डालें -->
             <div class="video-card">
-                <img src="वीडियो1-थंबनेल.jpg" class="video-thumbnail">
-                <h3>वीडियो 1 टाइटल</h3>
+                <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" frameborder="0" allowfullscreen></iframe>
+                <h3>नंबर 1 बेस्ट वीडियो</h3>
             </div>
             <div class="video-card">
-                <img src="वीडियो2-थंबनेल.jpg" class="video-thumbnail">
-                <h3>https://www.youtube.com/watch?v=ByVpMBQybJQ&list=RDByVpMBQybJQ&start_radio=1</h3>
+                <iframe src="https://www.youtube.com/embed/mqVDOHDyfuE" frameborder="0" allowfullscreen></iframe>
+                <h3>नंबर 2 बेस्ट वीडियो</h3>
             </div>
         </div>
     </section>
 
-    <!-- Categories Grid -->
+    <!-- Categories -->
     <section class="categories-section">
-        <h2>वीडियो कैटेगरीज</h2>
+        <h2>क्रांतिकारी वीडियो 🔥</h2>
         <div class="categories-grid">
-            <div class="category-card" onclick="showVideos('finance')">
-                फाइनेंस
-            </div>
-            <div class="category-card" onclick="showVideos('astrology')">
-                एस्ट्रोलॉजी
-            </div>
-            <div class="category-card" onclick="showVideos('committee')">
-                कमेटी वीडियो
-            </div>
+            <div class="category-card" onclick="showVideos('kranti1')">क्रांतिकारी 1</div>
+            <div class="category-card" onclick="showVideos('kranti2')">क्रांतिकारी 2</div>
+            <div class="category-card" onclick="showVideos('kranti3')">क्रांतिकारी 3 (खाली)</div>
+            <div class="category-card" onclick="showVideos('kranti4')">क्रांतिकारी 4 (खाली)</div>
+            <div class="category-card" onclick="showVideos('kranti5')">क्रांतिकारी 5 (खाली)</div>
         </div>
     </section>
 
-    <!-- Category Videos Container -->
-    <div id="finance" class="videos-grid">
-        <!-- फाइनेंस category के वीडियो -->
-        <div class="video-card">
-            <img src="finance-video1.jpg" class="video-thumbnail">
-            <h3>फाइनेंस वीडियो 1</h3>
-        </div>
-        <!-- और वीडियो जोड़ें -->
-    </div>
-
-    <!-- About Me Section -->
-    <section class="about-section">
-        <h2>मेरे बारे में</h2>
-        <p>मैं 5+ साल से व्हाइटबोर्ड एनिमेशन बना रहा हूं... और जानकारी यहां भरें।</p>
-    </section>
-
-    <script>
-        // JavaScript: Category दिखाने के लिए
-        function showVideos(categoryId) {
-            // Hide all video grids
-            document.querySelectorAll('.videos-grid').forEach(grid => {
-                grid.style.display = 'none';
-            });
-            
-            // Show selected category
-            const selectedGrid = document.getElementById(categoryId);
-            if (selectedGrid) {
-                selectedGrid.style.display = 'grid';
-            }
-
-            // Scroll to the videos section
-            selectedGrid.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-</body>
-</html>
+    <!-- Category 1 Videos (Kranti 1) -->
+    <div id="kranti1" class="videos-grid" style="
