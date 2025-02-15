@@ -1,55 +1,79 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>मेरी पोर्टफोलियो वेबसाइट</title>
+    <title>My Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
-        h1 { color: #333; }
-        .video-container { display: flex; justify-content: center; gap: 20px; margin: 20px; }
-        .video { flex: 1; max-width: 50%; }
-        .btn-container { margin-top: 20px; }
-        button { padding: 10px 20px; margin: 5px; border: none; background: #007BFF; color: white; font-size: 18px; cursor: pointer; }
-        button:hover { background: #0056b3; }
-        #videoSection { margin-top: 20px; }
-        iframe { width: 90%; height: 500px; border: none; margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .category {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 560px;
+            height: 315px;
+        }
+        .category a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            width: 200px;
+            border-radius: 5px;
+        }
+        .category a:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-
-    <h1>🎥 मेरी पोर्टफोलियो वेबसाइट</h1>
-
-    <!-- 📌 बेस्ट वीडियो (साइड-बाय-साइड) -->
+    <h1>My Best Videos</h1>
     <div class="video-container">
-        <div class="video">
-            <h2>✨ मेरा बेस्ट वीडियो #1</h2>
-            <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <h2>✨ मेरा बेस्ट वीडियो #2</h2>
-            <iframe src="https://www.youtube.com/embed/mqVDOHDyfuE?start=29" allowfullscreen></iframe>
-        </div>
+        <iframe src="https://www.youtube.com/embed/S6n72q0GaHc?si=vno1cLJrzERps4um" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/mqVDOHDyfuE?si=t4YRT6CZGTSk_GHw&amp;start=29" frameborder="0" allowfullscreen></iframe>
     </div>
-
-    <!-- 🎯 क्रांतिकारी (कैटेगरी) बटन -->
-    <h2>🔥 क्रांतिकारी टॉपिक्स</h2>
-    <div class="btn-container">
-        <button onclick="showContent('https://www.youtube.com/embed/videoseries?list=PLmviLHSh7hy-hhgN3_9dpYI9sjmKGrda4')">📊 फाइनेंस</button>
-        <button onclick="showContent('https://drive.google.com/embeddedfolderview?id=1sYcWoy_ibcCn6dvwr2TM37FBI1UrNRCr#grid')">📁 गूगल ड्राइव</button>
-        <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 3</button>
-        <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 4</button>
-        <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 5</button>
+    
+    <h2>My Categories</h2>
+    <div class="category">
+        <h3>Finance</h3>
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLmviLHSh7hy-hhgN3_9dpYI9sjmKGrda4" frameborder="0" allowfullscreen></iframe>
     </div>
-
-    <!-- 📺 वीडियो/ड्राइव सेक्शन -->
-    <div id="videoSection"></div>
-
+    <div class="category">
+        <h3>Google Drive Videos</h3>
+        <div id="drive-videos"></div>
+    </div>
+    
     <script>
-        function showContent(url) {
-            document.getElementById("videoSection").innerHTML = `<iframe src="${url}"></iframe>`;
+        const driveFolderID = "1sYcWoy_ibcCn6dvwr2TM37FBI1UrNRCr";
+        const driveContainer = document.getElementById("drive-videos");
+        
+        function fetchDriveVideos() {
+            fetch(`https://www.googleapis.com/drive/v3/files?q='${driveFolderID}'+in+parents&key=YOUR_GOOGLE_DRIVE_API_KEY`)
+                .then(response => response.json())
+                .then(data => {
+                    data.files.forEach(file => {
+                        const videoElement = document.createElement("iframe");
+                        videoElement.src = `https://drive.google.com/file/d/${file.id}/preview`;
+                        videoElement.width = "560";
+                        videoElement.height = "315";
+                        driveContainer.appendChild(videoElement);
+                    });
+                })
+                .catch(error => console.error("Error fetching Google Drive videos:", error));
         }
+        
+        fetchDriveVideos();
     </script>
-
 </body>
 </html>
