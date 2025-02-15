@@ -31,9 +31,13 @@
             text-decoration: none;
             width: 200px;
             border-radius: 5px;
+            cursor: pointer;
         }
         .category a:hover {
             background-color: #0056b3;
+        }
+        #astrology-videos {
+            display: none;
         }
     </style>
 </head>
@@ -50,12 +54,26 @@
         <iframe src="https://www.youtube.com/embed/videoseries?list=PLmviLHSh7hy-hhgN3_9dpYI9sjmKGrda4" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="category">
-        <h3>Astrology Videos</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/CTwu7sgHO8k?si=FPSNpBNWn4O4AzrB" frameborder="0" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/82pnE01N30o?si=4_K0iYOxmlXhXOqv" frameborder="0" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/UnoPeEXAU2o?si=qqHVf7izqvRv26CR" frameborder="0" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dd99mj03grs?si=sx37kEh23lTZa_D3" frameborder="0" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eYXV7kHRZCo?si=a6KS4IYRqsH9tFpz" frameborder="0" allowfullscreen></iframe>
+        <h3>Astrology</h3>
+        <a onclick="toggleAstrologyVideos()">Show Astrology Videos</a>
+        <div id="astrology-videos">
+            <iframe src="https://www.youtube.com/embed/CTwu7sgHO8k?si=FPSNpBNWn4O4AzrB" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/82pnE01N30o?si=4_K0iYOxmlXhXOqv" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/UnoPeEXAU2o?si=qqHVf7izqvRv26CR" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/dd99mj03grs?si=sx37kEh23lTZa_D3" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/eYXV7kHRZCo?si=a6KS4IYRqsH9tFpz" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
+    
+    <script>
+        function toggleAstrologyVideos() {
+            const videoSection = document.getElementById("astrology-videos");
+            if (videoSection.style.display === "none") {
+                videoSection.style.display = "block";
+            } else {
+                videoSection.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
