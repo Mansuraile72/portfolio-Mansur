@@ -3,164 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>व्हाइटबोर्ड एनिमेशन पोर्टफोलियो</title>
-       <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* वीडियो कार्ड स्टाइल */
-        .featured-section {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .categories-section {
-            padding: 2rem;
-            background: #f5f5f5;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .category-thumb {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .category-card h3 {
-            padding: 1rem;
-            text-align: center;
-            color: #333;
-        }
-
-        .video-list {
-            display: none; /* शुरू में छिपाएं */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .video-list.active {
-            display: grid; /* क्लिक करने पर दिखाएं */
-        }
-
-        .video-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 1rem;
-        }
-
-        .video-card iframe {
-            width: 100%;
-            height: 200px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .video-card h4 {
-            padding: 1rem 0;
-            text-align: center;
-        }
+    <title>मेरी पोर्टफोलियो वेबसाइट</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+        h1 { color: #333; }
+        .video-container { margin: 20px auto; max-width: 700px; }
+        .btn-container { margin-top: 20px; }
+        button { padding: 10px 20px; margin: 5px; border: none; background: #007BFF; color: white; font-size: 18px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        #videoSection { margin-top: 20px; }
     </style>
 </head>
 <body>
-    <!-- फीचर्ड वीडियो -->
-    <section class="featured-section">
-        <h1>मेरे बेस्ट वीडियो</h1>
-        <div class="video-list active" id="featured">
-            <!-- वीडियो 1 -->
-            <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" allowfullscreen></iframe>
-                <h4>नंबर 1 बेस्ट वीडियो</h4>
-            </div>
-            <!-- वीडियो 2 -->
-            <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/mqVDOHDyfuE" allowfullscreen></iframe>
-                <h4>नंबर 2 बेस्ट वीडियो</h4>
-            </div>
-        </div>
-    </section>
 
-    <!-- क्रांतिकारी कैटेगरी -->
-    <section class="categories-section">
-        <h2>कैटेगरी चुनें</h2>
-        <div class="categories-grid">
-            <!-- फाइनेंस -->
-            <div class="category-card" onclick="showVideos('finance')">
-                <img src="finance.jpg" class="category-thumb" alt="फाइनेंस">
-                <h3>फाइनेंस</h3>
-            </div>
-            <!-- एस्ट्रोलॉजी -->
-            <div class="category-card" onclick="showVideos('astrology')">
-                <img src="astrology.jpg" class="category-thumb" alt="एस्ट्रोलॉजी">
-                <h3>एस्ट्रोलॉजी</h3>
-            </div>
-            <!-- कमेटी (खाली) -->
-            <div class="category-card" onclick="showVideos('committee')">
-                <img src="dummy.jpg" class="category-thumb" alt="कमेटी">
-                <h3>कमेटी (Coming Soon)</h3>
-            </div>
-            <!-- क्राईम (खाली) -->
-            <div class="category-card" onclick="showVideos('crime')">
-                <img src="dummy.jpg" class="category-thumb" alt="क्राईम">
-                <h3>क्राईम (Coming Soon)</h3>
-            </div>
-            <!-- टेक्नोलॉजी (खाली) -->
-            <div class="category-card" onclick="showVideos('tech')">
-                <img src="dummy.jpg" class="category-thumb" alt="टेक्नोलॉजी">
-                <h3>टेक्नोलॉजी (Coming Soon)</h3>
-            </div>
-        </div>
-    </section>
+    <h1>🎥 मेरी पोर्टफोलियो वेबसाइट</h1>
 
-    <!-- कैटेगरी वीडियो से
-</head>
-<body>
-    <!-- Featured Videos -->
-    <section class="featured-section">
-        <h1>मेरे बेस्ट वीडियो ✨</h1>
-        <div class="featured-videos">
-            <!-- Video 1 -->
-            <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" allowfullscreen></iframe>
-                <h3>नंबर 1 बेस्ट वीडियो</h3>
-            </div>
-            <!-- Video 2 -->
-            <div class="video-card">
-                <iframe src="https://YouTube.com/embed/mqVDOHDyfuE" allowfullscreen></iframe>
-                <h3>नंबर 2 बेस्ट वीडियो</h3>
-            </div>
-        </div>
-    </section>
+    <!-- 📌 बेस्ट वीडियो सेक्शन -->
+    <div class="video-container">
+        <h2>✨ मेरा बेस्ट वीडियो #1</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/S6n72q0GaHc" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-    <!-- Categories -->
-    <section class="categories-section">
-        <h2>क्रांतिकारी वीडियो 🔨</h2>
-        <div class="categories-grid">
-            <!-- Category 1 -->
-            <div class="category-card" onclick="showVideos('finance')">
-                <img src="finance-thumb.jpg" class="category-thumbnail">
-               
+    <div class="video-container">
+        <h2>✨ मेरा बेस्ट वीडियो #2</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mqVDOHDyfuE?start=29" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- 🎯 क्रांतिकारी (कैटेगरी) बटन -->
+    <h2>🔥 क्रांतिकारी टॉपिक्स</h2>
+    <div class="btn-container">
+        <button onclick="showPlaylist('https://www.youtube.com/embed/videoseries?list=PLmviLHSh7hy-hhgN3_9dpYI9sjmKGrda4')">📊 फाइनेंस</button>
+        <button onclick="showDrive('https://drive.google.com/drive/folders/1sYcWoy_ibcCn6dvwr2TM37FBI1UrNRCr')">📁 गूगल ड्राइव</button>
+        <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 3</button>
+        <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 4</button>
+        <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 5</button>
+    </div>
+
+    <!-- 📺 वीडियो सेक्शन -->
+    <div id="videoSection"></div>
+
+    <script>
+        function showPlaylist(playlistUrl) {
+            document.getElementById("videoSection").innerHTML = `
+                <h2>📌 चुनी गई क्रांति के वीडियो</h2>
+                <iframe width="560" height="315" src="${playlistUrl}" frameborder="0" allowfullscreen></iframe>
+            `;
+        }
+
+        function showDrive(driveUrl) {
+            document.getElementById("videoSection").innerHTML = `
+                <h2>📂 Google Drive Videos</h2>
+                <p>🔗 <a href="${driveUrl}" target="_blank">यहाँ क्लिक करें</a> गूगल ड्राइव में वीडियो देखने के लिए।</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
