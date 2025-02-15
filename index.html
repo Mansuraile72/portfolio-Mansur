@@ -7,54 +7,47 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
         h1 { color: #333; }
-        .video-container { margin: 20px auto; max-width: 700px; }
+        .video-container { display: flex; justify-content: center; gap: 20px; margin: 20px; }
+        .video { flex: 1; max-width: 50%; }
         .btn-container { margin-top: 20px; }
         button { padding: 10px 20px; margin: 5px; border: none; background: #007BFF; color: white; font-size: 18px; cursor: pointer; }
         button:hover { background: #0056b3; }
         #videoSection { margin-top: 20px; }
+        iframe { width: 90%; height: 500px; border: none; margin-top: 20px; }
     </style>
 </head>
 <body>
 
     <h1>🎥 मेरी पोर्टफोलियो वेबसाइट</h1>
 
-    <!-- 📌 बेस्ट वीडियो सेक्शन -->
+    <!-- 📌 बेस्ट वीडियो (साइड-बाय-साइड) -->
     <div class="video-container">
-        <h2>✨ मेरा बेस्ट वीडियो #1</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/S6n72q0GaHc" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="video-container">
-        <h2>✨ मेरा बेस्ट वीडियो #2</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mqVDOHDyfuE?start=29" frameborder="0" allowfullscreen></iframe>
+        <div class="video">
+            <h2>✨ मेरा बेस्ट वीडियो #1</h2>
+            <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <h2>✨ मेरा बेस्ट वीडियो #2</h2>
+            <iframe src="https://www.youtube.com/embed/mqVDOHDyfuE?start=29" allowfullscreen></iframe>
+        </div>
     </div>
 
     <!-- 🎯 क्रांतिकारी (कैटेगरी) बटन -->
     <h2>🔥 क्रांतिकारी टॉपिक्स</h2>
     <div class="btn-container">
-        <button onclick="showPlaylist('https://www.youtube.com/embed/videoseries?list=PLmviLHSh7hy-hhgN3_9dpYI9sjmKGrda4')">📊 फाइनेंस</button>
-        <button onclick="showDrive('https://drive.google.com/drive/folders/1sYcWoy_ibcCn6dvwr2TM37FBI1UrNRCr')">📁 गूगल ड्राइव</button>
+        <button onclick="showContent('https://www.youtube.com/embed/videoseries?list=PLmviLHSh7hy-hhgN3_9dpYI9sjmKGrda4')">📊 फाइनेंस</button>
+        <button onclick="showContent('https://drive.google.com/embeddedfolderview?id=1sYcWoy_ibcCn6dvwr2TM37FBI1UrNRCr#grid')">📁 गूगल ड्राइव</button>
         <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 3</button>
         <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 4</button>
         <button onclick="alert('🚀 अभी यह सेक्शन खाली है, बाद में ऐड करें!')">📜 क्रांतिकारी 5</button>
     </div>
 
-    <!-- 📺 वीडियो सेक्शन -->
+    <!-- 📺 वीडियो/ड्राइव सेक्शन -->
     <div id="videoSection"></div>
 
     <script>
-        function showPlaylist(playlistUrl) {
-            document.getElementById("videoSection").innerHTML = `
-                <h2>📌 चुनी गई क्रांति के वीडियो</h2>
-                <iframe width="560" height="315" src="${playlistUrl}" frameborder="0" allowfullscreen></iframe>
-            `;
-        }
-
-        function showDrive(driveUrl) {
-            document.getElementById("videoSection").innerHTML = `
-                <h2>📂 Google Drive Videos</h2>
-                <p>🔗 <a href="${driveUrl}" target="_blank">यहाँ क्लिक करें</a> गूगल ड्राइव में वीडियो देखने के लिए।</p>
-            `;
+        function showContent(url) {
+            document.getElementById("videoSection").innerHTML = `<iframe src="${url}"></iframe>`;
         }
     </script>
 
