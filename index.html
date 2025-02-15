@@ -6,22 +6,59 @@
     <title>व्हाइटबोर्ड एनिमेशन पोर्टफोलियो</title>
     <style>
         * { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
-        .featured-section, .categories-section { padding:2rem; text-align:center; }
-        .featured-videos, .categories-grid, .videos-grid { 
+        
+        /* Featured Videos */
+        .featured-section { padding:2rem; text-align:center; background: #f5f5f5; }
+        .featured-videos { 
             display:grid; 
             grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
             gap:1rem; 
             margin:2rem 0;
         }
-        .video-card { background:#fff; border-radius:10px; padding:1rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-        .video-card iframe { width:100%; height:200px; border-radius:5px; }
-        .category-card { 
-            background:#007bff; color:#fff; padding:2rem; border-radius:10px;
-            cursor:pointer; transition:transform 0.3s; 
+        
+        /* Video Cards (Responsive) */
+        .video-card {
+            position: relative;
+            overflow: hidden;
+            border-radius:10px;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .category-card:hover { transform:scale(1.05); }
-        .about-section { padding:3rem 2rem; background:#333; color:#fff; text-align:center; }
-        .drive-link { display:block; margin:1rem; color:#007bff; text-decoration:none; }
+        .video-card iframe {
+            position: absolute;
+            top:0; left:0;
+            width:100% !important;
+            height:100% !important;
+            border: none;
+        }
+        .video-card h3 { padding:1rem; text-align:center; }
+        
+        /* Categories with Thumbnails */
+        .categories-section { padding:2rem; text-align:center; }
+        .categories-grid { 
+            display:grid; 
+            grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+            gap:1rem; 
+            margin:2rem 0;
+        }
+        .category-card {
+            cursor: pointer;
+            background: white;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .category-card:hover { transform: scale(0.95); }
+        .category-thumbnail {
+            width:100%; 
+            height:150px;
+            object-fit:cover;
+            border-radius:10px 10px 0 0;
+        }
+        .category-card h3 { padding:1rem; margin:0; color: #333; }
+        
+        /* About Section */
+        .about-section { padding:3rem 2rem; background:#333; color:white; text-align:center; }
     </style>
 </head>
 <body>
@@ -29,12 +66,14 @@
     <section class="featured-section">
         <h1>मेरे बेस्ट वीडियो ✨</h1>
         <div class="featured-videos">
+            <!-- Video 1 -->
             <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/S6n72q0GaHc" allowfullscreen></iframe>
                 <h3>नंबर 1 बेस्ट वीडियो</h3>
             </div>
+            <!-- Video 2 -->
             <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/mqVDOHDyfuE" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://YouTube.com/embed/mqVDOHDyfuE" allowfullscreen></iframe>
                 <h3>नंबर 2 बेस्ट वीडियो</h3>
             </div>
         </div>
@@ -42,15 +81,9 @@
 
     <!-- Categories -->
     <section class="categories-section">
-        <h2>क्रांतिकारी वीडियो 🔥</h2>
+        <h2>क्रांतिकारी वीडियो 🔨</h2>
         <div class="categories-grid">
-            <div class="category-card" onclick="showVideos('kranti1')">क्रांतिकारी 1</div>
-            <div class="category-card" onclick="showVideos('kranti2')">क्रांतिकारी 2</div>
-            <div class="category-card" onclick="showVideos('kranti3')">क्रांतिकारी 3 (खाली)</div>
-            <div class="category-card" onclick="showVideos('kranti4')">क्रांतिकारी 4 (खाली)</div>
-            <div class="category-card" onclick="showVideos('kranti5')">क्रांतिकारी 5 (खाली)</div>
-        </div>
-    </section>
-
-    <!-- Category 1 Videos (Kranti 1) -->
-    <div id="kranti1" class="videos-grid" style="
+            <!-- Category 1 -->
+            <div class="category-card" onclick="showVideos('finance')">
+                <img src="finance-thumb.jpg" class="category-thumbnail">
+               
