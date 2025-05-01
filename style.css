@@ -49,14 +49,14 @@ main {
 }
 
 /* --- Headings and Text --- */
-h1, h2, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 { /* Added h3 */
     color: #333333;
     margin-bottom: 15px;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-h1:hover, h2:hover {
+h1:hover, h2:hover, h3:hover { /* Added h3 */
    color: #4A90E2;
 }
 
@@ -67,6 +67,19 @@ h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    font-size: 2.2em; /* Slightly adjusted base H2 size */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px; /* More space below H2 */
+}
+
+h3 { /* Style for new section title */
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 25px; /* Space below H3 */
+}
 
 p {
     margin-bottom: 15px;
@@ -95,25 +108,76 @@ li {
 }
 
 /* --- Hero Section Specifics --- */
+#hero {
+     padding-bottom: 40px; /* Reduce bottom padding if logos are directly below */
+     border-bottom: none; /* Remove border if logos are next */
+}
+
 #hero h1 {
     margin-bottom: 15px;
 }
-#hero h2 {
+/* Updated Hero Subtitle Style */
+#hero .hero-subtitle {
     font-size: 1.4em;
     font-weight: 400;
     color: #555;
     max-width: 700px;
     margin: 0 auto 20px auto;
-    border-bottom: none;
-    padding-bottom: 0;
 }
 
+
+/* --- NEW: Featured Channels Section --- */
+#featured-channels {
+    padding: 40px 0; /* Adjust padding as needed */
+    border-top: 1px solid #eee; /* Add border if needed */
+    text-align: center;
+     /* Inherits fade-in from .content-section */
+}
+
+#featured-channels h3 {
+    margin-bottom: 30px; /* Space below title */
+    color: #444; /* Slightly different color for this title */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    align-items: center;    /* Align logos vertically */
+    flex-wrap: wrap;        /* Allow logos to wrap on smaller screens */
+    gap: 35px 30px; /* Vertical and horizontal gap */
+}
+
+.logo-container a {
+    display: inline-block;
+    text-decoration: none; /* Ensure no underline on logo link */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-container a:hover {
+    transform: scale(1.08); /* Slightly enlarge logo on hover */
+    opacity: 0.9;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.logo-container img {
+    max-height: 65px;  /* Adjust max height as needed */
+    width: auto;       /* Maintain aspect ratio */
+    max-width: 150px; /* Prevent logos from getting too wide */
+    vertical-align: middle; /* Helps with alignment */
+}
+/* --- END: Featured Channels Section --- */
+
+
 /* --- Portfolio Section --- */
+#portfolio {
+    padding-top: 60px; /* Ensure enough space above portfolio */
+}
+
 .portfolio-grid {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top: 30px;
+    /* margin-top: 30px; removed, handled by section padding */
 }
 
 .portfolio-item {
@@ -135,7 +199,7 @@ li {
 }
 
 .portfolio-content .item-description {
-    color: #FF00FF;
+    color: #333; /* Changed color from Magenta */
     font-weight: 600;
     font-size: 1.4em;
     line-height: 1.4;
@@ -278,13 +342,18 @@ li {
 @media (min-width: 768px) {
     h1 { font-size: 3.2em; }
     h2 { font-size: 2.5em; }
-    #hero h2 { font-size: 1.6em; }
+    h3 { font-size: 2em; } /* Adjust H3 size */
+    #hero .hero-subtitle { font-size: 1.6em; } /* Adjust subtitle size */
 
     .content-section { padding: 70px 0; }
+    #featured-channels { padding: 50px 0; } /* Adjust logo padding */
+    .logo-container { gap: 45px 40px; } /* Increase gap */
+    .logo-container img { max-height: 75px; } /* Increase logo size */
+
     .portfolio-content { padding: 40px; }
     .portfolio-content .item-description { font-size: 1.5em; }
 
-    /* --- NEW: Apply Flex layout to Portfolio Items --- */
+    /* --- Apply Flex layout to Portfolio Items --- */
     .portfolio-layout-wrapper {
         display: flex;
         align-items: flex-start; /* Align items to the top */
@@ -294,20 +363,13 @@ li {
     .portfolio-layout-wrapper .video-wrapper {
         flex: 1.5; /* Video takes more space (adjust ratio as needed) */
         margin-bottom: 0; /* Remove bottom margin, use gap instead */
-        /* Maintain aspect ratio */
-        padding-bottom: calc(56.25% / 1.5); /* Adjust padding-bottom based on flex ratio if needed, might need tweaking */
-        /* NOTE: Fine-tuning the aspect ratio within flex might be complex.
-           The default 56.25% might stretch vertically if the text column is tall.
-           Keeping the original padding-bottom is often visually acceptable. */
+        padding-bottom: calc(56.25% / 1.5); /* Adjusted aspect ratio within flex */
     }
 
     .portfolio-layout-wrapper .portfolio-details {
         flex: 1; /* Details take less space */
     }
-    /* --- END NEW --- */
 
-
-    /* Adjust max-width for wider screens if needed */
     #offer .offer-list { max-width: 700px; }
 }
 
@@ -315,29 +377,31 @@ li {
 @media (min-width: 1024px) {
     h1 { font-size: 3.8em; }
     h2 { font-size: 2.8em; }
-    #hero h2 { font-size: 1.7em; }
+    h3 { font-size: 2.2em; } /* Adjust H3 size */
+    #hero .hero-subtitle { font-size: 1.7em; } /* Adjust subtitle size */
 
     .content-section { padding: 80px 0; }
+     #featured-channels { padding: 60px 0; } /* Adjust logo padding */
+    .logo-container { gap: 55px 50px; } /* Increase gap */
+    .logo-container img { max-height: 80px; } /* Increase logo size */
+
     .portfolio-content { padding: 45px; }
     .portfolio-content .item-description { font-size: 1.6em; }
 
-    /* --- NEW: Adjust gap or flex basis for larger screens if desired --- */
+    /* --- Adjust gap or flex basis for larger screens if desired --- */
      .portfolio-layout-wrapper {
         gap: 40px; /* Slightly larger gap */
     }
-    /* You could adjust flex ratios here too if needed */
-    /* .portfolio-layout-wrapper .video-wrapper { flex: 2; } */
-    /* .portfolio-layout-wrapper .portfolio-details { flex: 1; } */
-    /* --- END NEW --- */
+    .portfolio-layout-wrapper .video-wrapper {
+        padding-bottom: calc(56.25% / 1.5); /* Keep aspect ratio consistent */
+    }
 
-
-    /* Adjust max-width for wider screens if needed */
     #offer .offer-list { max-width: 750px; }
 }
 
 /* Further Adjustments for Very Wide Screens (Optional) */
 @media (min-width: 1200px) {
     /* Optional: Further refinements if needed */
-    /* For example, limit the width of the flex container within the portfolio item */
-    /* .portfolio-layout-wrapper { max-width: 1000px; margin: 0 auto; } */
+    .logo-container img { max-height: 85px; } /* Slightly larger logos */
+    .logo-container { gap: 65px 60px; }
 }
