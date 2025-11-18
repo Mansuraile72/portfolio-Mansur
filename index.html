@@ -3,91 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whiteboard Animator Portfolio</title>
-    <!-- Google Fonts -->
+    <title>Whiteboard Animator Portfolio - Bring Ideas to Life</title>
+    
+    <!-- Google Fonts for Handwritten Style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Permanent+Marker&family=Caveat:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.ico" type="image/x-icon">
 </head>
 <body>
+    
+    <!-- Animated Whiteboard Doodles Background -->
+    <div class="doodle-container">
+        <div class="doodle doodle-1">✏️</div>
+        <div class="doodle doodle-2">📐</div>
+        <div class="doodle doodle-3">💡</div>
+        <div class="doodle doodle-4">🎬</div>
+        <div class="doodle doodle-5">🎨</div>
+        <div class="doodle doodle-6">📊</div>
+        <div class="doodle doodle-7">🚀</div>
+        <div class="doodle doodle-8">⭐</div>
+        <div class="doodle doodle-9">📱</div>
+        <div class="doodle doodle-10">🎯</div>
+        
+        <!-- Sketch Elements -->
+        <div class="sketch sketch-1"></div>
+        <div class="sketch sketch-2"></div>
+        <div class="sketch sketch-3"></div>
+        <div class="sketch sketch-4"></div>
+    </div>
+
+    <!-- Drawing Hand Animation -->
+    <div class="drawing-hand">
+        <img src="https://cdn-icons-png.flaticon.com/512/3094/3094216.png" alt="Drawing Hand">
+    </div>
 
     <!-- ===== MAIN CONTENT WRAPPER ===== -->
     <main>
 
-        <!-- 1. Top Title Section -->
+        <!-- 1. Enhanced Hero Section -->
         <section id="hero" class="content-section">
-            <h1>Bring Your Ideas to Life with Whiteboard Animation</h1>
-            <p class="hero-subtitle">Having started in 2019, I have completed over 500 videos.</p>
+            <div class="hero-content">
+                <h1 class="hand-drawn-title">
+                    <span class="title-word">Bring</span>
+                    <span class="title-word">Your</span>
+                    <span class="title-word">Ideas</span>
+                    <span class="title-word">to</span>
+                    <span class="title-word">Life</span>
+                    <span class="title-word">with</span>
+                    <span class="title-word highlight">Whiteboard</span>
+                    <span class="title-word highlight">Animation</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="sketch-underline">Since 2019</span> • 
+                    <span class="sketch-circle">500+ Videos</span> • 
+                    <span class="sketch-star">Happy Clients</span>
+                </div>
+                
+                <!-- Animated Arrows -->
+                <div class="arrow-container">
+                    <div class="arrow arrow-left">⬇</div>
+                    <div class="arrow arrow-right">⬇</div>
+                </div>
+            </div>
         </section>
 
-        <!-- ****** चित्रित चैनल लोगो सेक्शन (अपडेट किया गया) ****** -->
+        <!-- 2. Enhanced Featured Channels Section -->
         <section id="featured-channels" class="content-section">
-            <h3>Channels I've Contributed To</h3>
+            <h3 class="section-title">
+                <span class="sketch-highlight">Channels I've Contributed To</span>
+            </h3>
             <div class="logo-container">
-                <!-- Card 1: Wealthy Mindset -->
-                <div class="project-card">
-                    <a href="https://youtube.com/@wealthymindset1995" target="_blank" rel="noopener noreferrer" title="Wealthy Mindset">
-                        <img src="wealthymindset1995.png" alt="Wealthy Mindset Logo">
-                        <span>Wealthy Mindset</span>
+                <!-- Logo 1: Wealthy Mindset -->
+                <div class="logo-item">
+                    <a href="https://youtube.com/@wealthymindset1995" target="_blank" class="logo-link">
+                        <div class="logo-wrapper">
+                            <img src="wealthymindset1995.png" alt="Wealthy Mindset Logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                        <span class="logo-label">Wealthy Mindset</span>
                     </a>
                 </div>
-                <!-- Card 2: Zodiac Talks -->
-                <div class="project-card">
-                    <a href="https://www.youtube.com/@zodiactalks" target="_blank" rel="noopener noreferrer" title="Zodiac Talks">
-                        <img src="zodiactalks.png" alt="Zodiac Talks Logo">
-                        <span>Zodiac Talks</span>
+                
+                <!-- Logo 2: Zodiac Talks -->
+                <div class="logo-item">
+                    <a href="https://www.youtube.com/@zodiactalks" target="_blank" class="logo-link">
+                        <div class="logo-wrapper">
+                            <img src="zodiactalks.png" alt="Zodiac Talks Logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                        <span class="logo-label">Zodiac Talks</span>
                     </a>
                 </div>
-                <!-- Card 3: The Wealth Echelon -->
-                <div class="project-card">
-                    <a href="https://www.youtube.com/@thewealthechelon/" target="_blank" rel="noopener noreferrer" title="The Wealth Echelon">
-                        <img src="thewealthechelon.png" alt="The Wealth Echelon Logo">
-                        <span>The Wealth Echelon</span>
+                
+                <!-- Logo 3: The Wealth Echelon -->
+                <div class="logo-item">
+                    <a href="https://www.youtube.com/@thewealthechelon/" target="_blank" class="logo-link">
+                        <div class="logo-wrapper">
+                            <img src="thewealthechelon.png" alt="The Wealth Echelon Logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                        <span class="logo-label">The Wealth Echelon</span>
                     </a>
                 </div>
-                <!-- Card 4: MoneyWise -->
-                <div class="project-card">
-                    <a href="https://youtube.com/@MoneyWiseYT" target="_blank" rel="noopener noreferrer" title="MoneyWise">
-                        <img src="MoneyWiseYT.png" alt="MoneyWise Logo">
-                        <span>MoneyWise</span>
+                
+                <!-- Logo 4: MoneyWise -->
+                <div class="logo-item">
+                    <a href="https://youtube.com/@MoneyWiseYT" target="_blank" class="logo-link">
+                        <div class="logo-wrapper">
+                            <img src="MoneyWiseYT.png" alt="MoneyWise Logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                        <span class="logo-label">MoneyWise</span>
                     </a>
                 </div>
-                <!-- Card 5: Compounding Mindset -->
-                <div class="project-card">
-                    <a href="https://youtube.com/@CompoundingMindsetYT" target="_blank" rel="noopener noreferrer" title="Compounding Mindset">
-                        <img src="CompoundingMindsetYT.png" alt="Compounding Mindset Logo">
-                        <span>Compounding Mindset</span>
+                
+                <!-- Logo 5: Compounding Mindset -->
+                <div class="logo-item">
+                    <a href="https://www.youtube.com/@CompoundingMindsetYT" target="_blank" class="logo-link">
+                        <div class="logo-wrapper">
+                            <img src="CompoundingMindsetYT.png" alt="Compounding Mindset Logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                        <span class="logo-label">Compounding Mindset</span>
                     </a>
                 </div>
             </div>
         </section>
-        <!-- ****** अंत: चित्रित चैनल लोगो सेक्शन ****** -->
 
-
-        <!-- 2. Portfolio Section (कोई बदलाव नहीं) -->
+        <!-- 3. Enhanced Portfolio Section -->
         <section id="portfolio" class="content-section">
-            <!-- "My Work" H2 Title Removed -->
             <div class="portfolio-grid">
 
                 <!-- Video Block 1: Finance -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="finance">
+                    <div class="portfolio-badge">Finance</div>
                     <div class="portfolio-content">
-                        <p class="item-description">Dreaming of creating content that empowers people to grow their money?</p>
+                        <p class="item-description hand-written">
+                            Dreaming of creating content that empowers people to grow their money? 💰
+                        </p>
                         <div class="portfolio-layout-wrapper">
                             <div class="video-wrapper">
-                                <iframe width="560" height="310" src="https://www.youtube.com/embed/dm1ztXbOFAg?si=iO9nOVmayleHsxnR" title="Finance Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-frame">
+                                    <iframe width="560" height="310" src="https://www.youtube.com/embed/dm1ztXbOFAg?si=iO9nOVmayleHsxnR" title="Finance Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div class="portfolio-details">
-                                <p><strong>Perfect for:</strong> YouTubers, finance coaches, investment advisors, or anyone educating about money.</p>
-                                <p>You can create videos like:</p>
-                                <ul>
-                                    <li>How to retire in just 5 years</li>
-                                    <li>Smart ways to save and invest</li>
-                                    <li>Tips to avoid paying extra tax</li>
-                                    <li>How to build passive income streams</li>
+                                <p class="detail-title"><strong>Perfect for:</strong></p>
+                                <p class="detail-text">YouTubers, finance coaches, investment advisors, or anyone educating about money.</p>
+                                <p class="detail-subtitle">You can create videos like:</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-check-circle"></i> How to retire in just 5 years</li>
+                                    <li><i class="fas fa-check-circle"></i> Smart ways to save and invest</li>
+                                    <li><i class="fas fa-check-circle"></i> Tips to avoid paying extra tax</li>
+                                    <li><i class="fas fa-check-circle"></i> How to build passive income streams</li>
                                 </ul>
                             </div>
                         </div>
@@ -95,21 +170,27 @@
                 </div>
 
                 <!-- Video Block 2: Business Promotion -->
-                <div class="portfolio-item">
-                     <div class="portfolio-content">
-                        <p class="item-description">Want to attract more customers and make your brand unforgettable?</p>
-                         <div class="portfolio-layout-wrapper">
+                <div class="portfolio-item" data-category="business">
+                    <div class="portfolio-badge">Business</div>
+                    <div class="portfolio-content">
+                        <p class="item-description hand-written">
+                            Want to attract more customers and make your brand unforgettable? 🚀
+                        </p>
+                        <div class="portfolio-layout-wrapper">
                             <div class="video-wrapper">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/p_CaLei1XiE?si=AesX8HsXiXctR5Tn" title="Business Promotion Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-frame">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p_CaLei1XiE?si=AesX8HsXiXctR5Tn" title="Business Promotion Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div class="portfolio-details">
-                                <p><strong>Perfect for:</strong> Business owners, startups, service providers, or anyone promoting products/services.</p>
-                                 <p>You can create videos like:</p>
-                                <ul>
-                                    <li>Showcase your new product</li>
-                                    <li>Tell your brand story</li>
-                                    <li>Customer success stories</li>
-                                    <li>Creative ads for Instagram, YouTube, Facebook</li>
+                                <p class="detail-title"><strong>Perfect for:</strong></p>
+                                <p class="detail-text">Business owners, startups, service providers, or anyone promoting products/services.</p>
+                                <p class="detail-subtitle">You can create videos like:</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-check-circle"></i> Showcase your new product</li>
+                                    <li><i class="fas fa-check-circle"></i> Tell your brand story</li>
+                                    <li><i class="fas fa-check-circle"></i> Customer success stories</li>
+                                    <li><i class="fas fa-check-circle"></i> Creative ads for Instagram, YouTube, Facebook</li>
                                 </ul>
                             </div>
                         </div>
@@ -117,21 +198,27 @@
                 </div>
 
                 <!-- Video Block 3: Astrology & Spiritual -->
-                <div class="portfolio-item">
-                     <div class="portfolio-content">
-                        <p class="item-description">Helping people find their destiny and decode the stars.</p>
-                         <div class="portfolio-layout-wrapper">
+                <div class="portfolio-item" data-category="astrology">
+                    <div class="portfolio-badge">Spiritual</div>
+                    <div class="portfolio-content">
+                        <p class="item-description hand-written">
+                            Helping people find their destiny and decode the stars ⭐
+                        </p>
+                        <div class="portfolio-layout-wrapper">
                             <div class="video-wrapper">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/D6dhtvEEVlk?si=tXo5J115x0SJqSTf" title="Astrology Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-frame">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6dhtvEEVlk?si=tXo5J115x0SJqSTf" title="Astrology Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div class="portfolio-details">
-                                <p><strong>Perfect for:</strong> Astrologers, spiritual coaches, mystic channels, or daily horoscope creators.</p>
-                                 <p>You can create videos like:</p>
-                                 <ul>
-                                    <li>Zodiac sign secrets revealed</li>
-                                    <li>What your birth chart says about you</li>
-                                    <li>Full moon rituals for success</li>
-                                    <li>Love compatibility predictions</li>
+                                <p class="detail-title"><strong>Perfect for:</strong></p>
+                                <p class="detail-text">Astrologers, spiritual coaches, mystic channels, or daily horoscope creators.</p>
+                                <p class="detail-subtitle">You can create videos like:</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-check-circle"></i> Zodiac sign secrets revealed</li>
+                                    <li><i class="fas fa-check-circle"></i> What your birth chart says about you</li>
+                                    <li><i class="fas fa-check-circle"></i> Full moon rituals for success</li>
+                                    <li><i class="fas fa-check-circle"></i> Love compatibility predictions</li>
                                 </ul>
                             </div>
                         </div>
@@ -139,88 +226,181 @@
                 </div>
 
                 <!-- Video Block 4: Edutainment -->
-                <div class="portfolio-item">
-                     <div class="portfolio-content">
-                         <p class="item-description">Want to grab attention with crazy, mind-blowing facts and questions?</p>
-                         <div class="portfolio-layout-wrapper">
+                <div class="portfolio-item" data-category="education">
+                    <div class="portfolio-badge">Education</div>
+                    <div class="portfolio-content">
+                        <p class="item-description hand-written">
+                            Want to grab attention with crazy, mind-blowing facts and questions? 🤯
+                        </p>
+                        <div class="portfolio-layout-wrapper">
                             <div class="video-wrapper">
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZCNqfy8S7HQ?si=JoQ--F4KNctNjbM1" title="Edutainment Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-frame">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZCNqfy8S7HQ?si=JoQ--F4KNctNjbM1" title="Edutainment Whiteboard Animation Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div class="portfolio-details">
-                                <p><strong>Perfect for:</strong> YouTubers, science lovers, educational channels, or anyone making "What If" style videos.</p>
-                                 <p>You can create videos like:</p>
-                                <ul>
-                                    <li>What if Earth had two suns?</li>
-                                    <li>What if all oceans dried up?</li>
-                                    <li>What if humans could fly naturally?</li>
-                                    <li>What if time travel was real?</li>
+                                <p class="detail-title"><strong>Perfect for:</strong></p>
+                                <p class="detail-text">YouTubers, science lovers, educational channels, or anyone making "What If" style videos.</p>
+                                <p class="detail-subtitle">You can create videos like:</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-check-circle"></i> What if Earth had two suns?</li>
+                                    <li><i class="fas fa-check-circle"></i> What if all oceans dried up?</li>
+                                    <li><i class="fas fa-check-circle"></i> What if humans could fly naturally?</li>
+                                    <li><i class="fas fa-check-circle"></i> What if time travel was real?</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </div> <!-- End of portfolio-grid -->
+            </div>
         </section>
 
-        <!-- 3. Updated "What I Offer" Section (कोई बदलाव नहीं) -->
+        <!-- 4. Enhanced "What I Offer" Section -->
         <section id="offer" class="content-section">
-            <h2>What I Offer</h2>
-            <p class="offer-description">I help you bring your ideas to life through engaging <strong>whiteboard animation videos</strong> designed to captivate and connect with your audience.</p>
+            <h2 class="section-title">
+                <span class="sketch-box">What I Offer</span>
+            </h2>
+            <p class="offer-description hand-written">
+                I help you bring your ideas to life through engaging <strong>whiteboard animation videos</strong> designed to captivate and connect with your audience.
+            </p>
 
-            <p><strong>My services include:</strong></p>
-            <ul class="offer-list">
-                <li>🎙️ <strong>Professional Voiceover</strong> (created with premium ElevenLabs subscription for realistic, natural-sounding AI voices)</li>
-                <li>🎵 <strong>Background Music and Sound Effects</strong> to make your videos lively and memorable</li>
-                <li>✍️ <strong>Subtitles and Captions</strong> for better accessibility and global reach</li>
-                <li>🎨 <strong>Custom Branding</strong> — perfectly matching your brand's colors, logo, and style</li>
-            </ul>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <div class="offer-icon">🎙️</div>
+                    <h4>Professional Voiceover</h4>
+                    <p>Created with premium ElevenLabs for realistic, natural-sounding AI voices</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">🎵</div>
+                    <h4>Music & Sound Effects</h4>
+                    <p>Make your videos lively and memorable with perfect audio</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">✍️</div>
+                    <h4>Subtitles & Captions</h4>
+                    <p>Better accessibility and global reach for your content</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">🎨</div>
+                    <h4>Custom Branding</h4>
+                    <p>Perfectly matching your brand's colors, logo, and style</p>
+                </div>
+            </div>
 
-            <p><strong>Tools I Use:</strong></p>
-             <ul class="offer-list">
-                <li>✏️ <strong>Videoscribe</strong> for high-quality whiteboard animations</li>
-                <li>🎤 <strong>ElevenLabs</strong> for crystal-clear voiceovers</li>
-                <li>🎬 <strong>Premiere Pro</strong> for smooth and professional video editing</li>
-            </ul>
+            <div class="tools-section">
+                <h3 class="tools-title">Tools I Master</h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2621/2621303.png" alt="Videoscribe">
+                        <span>Videoscribe</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="ElevenLabs">
+                        <span>ElevenLabs</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968525.png" alt="Premiere Pro">
+                        <span>Premiere Pro</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- 4. Updated "Free Sample Offer" Section (कोई बदलाव नहीं) -->
+        <!-- 5. Enhanced "Free Sample Offer" Section -->
         <section id="free-sample" class="content-section">
-            <h2>Not Sure Yet?</h2>
-            <p>I completely understand — choosing the right creator for your project is important!</p>
-            <p>That’s why I offer a <strong>FREE 30-second sample video</strong> based on your script or idea.</p>
-            <p>Simply send me a small brief or a few lines of your script, and I'll create a short demo for you — absolutely free, no obligations.</p>
-            <p>🔥 <strong>Experience the quality firsthand before moving forward!</strong></p>
-            <p>👉 <strong>Ready to see your idea in action? Contact me today.</strong></p>
+            <div class="free-sample-wrapper">
+                <h2 class="section-title">
+                    <span class="sketch-underline-thick">Not Sure Yet?</span>
+                </h2>
+                <div class="sample-content">
+                    <div class="sample-badge">FREE</div>
+                    <p class="sample-text">I completely understand — choosing the right creator for your project is important!</p>
+                    <div class="sample-offer-box">
+                        <h3>Get Your FREE 30-Second Sample!</h3>
+                        <p>Simply send me a small brief or a few lines of your script, and I'll create a short demo for you — absolutely free, no obligations.</p>
+                        <div class="sample-features">
+                            <span class="feature-tag">✨ No Payment Required</span>
+                            <span class="feature-tag">🎬 30 Seconds Demo</span>
+                            <span class="feature-tag">🚀 Quick Delivery</span>
+                        </div>
+                    </div>
+                    <p class="sample-cta">🔥 <strong>Experience the quality firsthand before moving forward!</strong></p>
+                </div>
+            </div>
         </section>
 
-        <!-- 5. WhatsApp Contact Button Section (कोई बदलाव नहीं) -->
+        <!-- 6. Enhanced WhatsApp Contact Section -->
         <section id="contact" class="content-section">
-            <h2>Get in Touch</h2>
-            <a href="https://wa.me/916398038295" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
-                Contact me on WhatsApp
-            </a>
+            <h2 class="section-title">
+                <span class="sketch-star-big">Get in Touch</span>
+            </h2>
+            <div class="contact-wrapper">
+                <p class="contact-text hand-written">Ready to bring your ideas to life? Let's chat!</p>
+                <a href="https://wa.me/916398038295" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Contact me on WhatsApp</span>
+                    <div class="button-glow"></div>
+                </a>
+                <div class="contact-info">
+                    <span class="info-item">📱 Quick Response</span>
+                    <span class="info-item">💬 Friendly Chat</span>
+                    <span class="info-item">🎯 Free Consultation</span>
+                </div>
+            </div>
         </section>
 
     </main>
-    <!-- ===== END OF MAIN CONTENT WRAPPER ===== -->
 
-
-    <!-- Simple JavaScript for Fade-in Animation (कोई बदलाव नहीं) -->
+    <!-- Enhanced JavaScript for Animations -->
     <script>
+        // Fade-in Animation
         const sections = document.querySelectorAll('.content-section');
-        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observerOptions = { 
+            root: null, 
+            rootMargin: '0px', 
+            threshold: 0.1 
+        };
+        
         const observerCallback = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Optional: Stop observing once visible
-                    // observer.unobserve(entry.target);
                 }
             });
         };
+        
         const observer = new IntersectionObserver(observerCallback, observerOptions);
         sections.forEach(section => { observer.observe(section); });
+
+        // Title Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const titleWords = document.querySelectorAll('.title-word');
+            titleWords.forEach((word, index) => {
+                word.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Doodle Floating Animation
+        const doodles = document.querySelectorAll('.doodle');
+        doodles.forEach(doodle => {
+            doodle.style.animationDelay = `${Math.random() * 5}s`;
+        });
+
+        // Drawing Hand Animation
+        let mouseTimer;
+        const drawingHand = document.querySelector('.drawing-hand');
+        
+        document.addEventListener('mousemove', (e) => {
+            drawingHand.style.opacity = '1';
+            drawingHand.style.left = e.pageX + 20 + 'px';
+            drawingHand.style.top = e.pageY - 20 + 'px';
+            
+            clearTimeout(mouseTimer);
+            mouseTimer = setTimeout(() => {
+                drawingHand.style.opacity = '0';
+            }, 2000);
+        });
     </script>
 
 </body>
