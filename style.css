@@ -1,6 +1,4 @@
-/* --- whiteboard.css --- */
-
-/* --- Global Styles & Resets --- */
+/* --- CSS Reset & Global Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -12,194 +10,121 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    /* Subtle grid background */
-    background-color: #fdfdfd;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-    color: #2c3e50; /* Dark slate blue */
-    line-height: 1.7;
-    font-size: 16px;
-    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+    font-family: 'Kalam', cursive;
+    background-color: #f4f4f4;
+    /* Subtle lit whiteboard effect */
+    background-image: radial-gradient(circle at center, #ffffff 0%, #f4f4f4 70%);
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px; /* Slightly larger base font for readability */
+    overflow-x: hidden;
 }
 
-/* --- MAIN CONTENT CONTAINER --- */
-main {
-    max-width: 1100px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* --- Section Styling & Animations --- */
-.content-section {
-    padding: 50px 0;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-}
-
-.content-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- Headings and Text --- */
-h1, h2, h3 {
-    font-family: 'Patrick Hand', cursive;
-    margin-bottom: 20px;
+/* --- Typography --- */
+h1, h2, h3, p, a, span, li, strong {
+    font-family: 'Kalam', cursive;
     font-weight: normal;
 }
 
 h1 {
-    font-size: 4em;
-    color: #2c3e50; /* Black */
-    line-height: 1.1;
+    font-size: 3.5em;
+    font-weight: 700; /* Bolder for main heading */
+    color: #2c3e50;
 }
 
 h2 {
-    font-size: 3em;
-    color: #3498db; /* Blue */
+    font-size: 2.8em;
+    color: #3498db;
 }
 
 h3 {
-    font-size: 2.5em;
-    color: #e74c3c; /* Red */
+    font-size: 2.2em;
+    color: #e74c3c;
 }
 
 p {
     margin-bottom: 15px;
-    color: #34495e; /* Slightly lighter slate */
-    max-width: 650px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+/* --- Layout & Sections --- */
+main {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-a:hover {
-    color: #e74c3c;
+.content-section {
+    padding: 60px 0;
+    text-align: center;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* --- Hero Section --- */
-#hero {
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
-
-#hero .hero-subtitle {
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.8em;
-    color: #555;
-}
-
-/* --- Featured Channels / Project Cards --- */
-#featured-channels {
-    padding: 40px 0;
-}
-
+/* --- Project Cards Section --- */
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Make cards same height */
-    flex-wrap: wrap;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 50px; /* Generous gap for a clean look */
+    justify-items: center;
+    margin-top: 40px;
 }
 
 .project-card {
-    background-color: #fff;
-    border: 2px solid #2c3e50;
-    /* Sketchy border effect */
-    border-radius: 15px 5px 20px 8px / 5px 20px 8px 15px;
-    box-shadow: 5px 5px 0px #3498db;
-    padding: 20px;
-    width: 220px;
+    background: #ffffff;
+    /* The specified hand-drawn border effect */
+    border: 2px solid #333;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    /* The specified harsh shadow */
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+    
+    /* Flexbox for internal alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    
+    padding: 25px;
     text-align: center;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                box-shadow 0.3s ease;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 .project-card:hover {
-    transform: rotate(3deg) scale(1.05);
-    box-shadow: 8px 8px 0px #e74c3c;
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .project-card a {
     text-decoration: none;
+    color: #333;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
+/* Image on top */
 .project-card img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
-    filter: grayscale(20%);
-    transition: filter 0.3s ease;
+    max-height: 80px; /* Control image size */
+    margin-bottom: 20px; /* Space between image and name */
 }
 
-.project-card:hover img {
-    filter: grayscale(0%);
-}
-
+/* Text name below */
 .project-card span {
-    font-family: 'Patrick Hand', cursive;
     font-size: 1.5em;
-    color: #2c3e50;
-    font-weight: normal;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-/* --- Portfolio Section --- */
-#portfolio {
-    padding-top: 40px;
-}
-
-.portfolio-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
+/* --- Other Sections (Minimal Styling) --- */
 .portfolio-item {
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    text-align: left;
-}
-
-.portfolio-content {
+    margin-top: 40px;
+    border: 2px dashed #ccc;
     padding: 20px;
-    border: 2px dashed #bdc3c7; /* Dashed border for a 'work-in-progress' feel */
-    border-radius: 5px;
-}
-
-.item-description {
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.6em;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 25px;
+    border-radius: 10px;
 }
 
 .video-wrapper {
@@ -208,10 +133,9 @@ li {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    border: 2px solid #2c3e50;
-    border-radius: 10px 4px 12px 6px / 4px 10px 6px 12px;
-    margin-bottom: 25px;
-    box-shadow: 3px 3px 0 #e74c3c;
+    border: 2px solid #333;
+    border-radius: 15px 5px 20px 8px / 5px 20px 8px 15px;
+    margin-bottom: 20px;
 }
 
 .video-wrapper iframe {
@@ -223,73 +147,57 @@ li {
     border: 0;
 }
 
-.portfolio-details {
-    font-size: 1.1em;
-}
-
-.portfolio-details ul {
-    list-style-type: '✏️'; /* Custom list bullet */
-    padding-left: 30px;
-}
-
-.portfolio-details li {
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-
-/* --- Offer & Free Sample Sections --- */
-#offer ul, #free-sample ul {
-    list-style-type: '✅';
-    padding-left: 30px;
-    display: inline-block;
-    text-align: left;
-}
-#offer li, #free-sample li {
-    padding-left: 10px;
-}
-
-/* --- WhatsApp Button --- */
 .whatsapp-button {
     display: inline-block;
-    background-color: #fff;
-    color: #2c3e50;
-    padding: 15px 30px;
-    border: 2px solid #2c3e50;
-    border-radius: 40px 10px 35px 15px / 10px 40px 15px 35px;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.8em;
+    background-color: #25D366;
+    color: #fff;
+    padding: 15px 35px;
+    border: 2px solid #333;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    font-size: 1.5em;
     text-decoration: none;
-    box-shadow: 4px 4px 0px #25D366;
-    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-out;
 }
 
 .whatsapp-button:hover {
-    background-color: #f0fff0;
-    color: #2c3e50;
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #25D366;
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
     text-decoration: none;
+    color: #fff;
 }
 
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
-    h1 { font-size: 3em; }
-    h2 { font-size: 2.5em; }
-    h3 { font-size: 2em; }
-    #hero .hero-subtitle { font-size: 1.5em; }
+/* --- Fade-in Animation (from original JS) --- */
+.content-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-    .project-card {
-        width: calc(50% - 40px); /* Two cards per row */
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2.2em; }
+    .logo-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        background-size: 30px 30px;
+    body { font-size: 16px; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    .logo-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 30px;
     }
-    .project-card {
-        width: 100%; /* One card per row */
+    .content-section {
+        padding: 40px 0;
     }
-    h1 { font-size: 2.5em; }
-    .whatsapp-button { font-size: 1.5em; }
 }
